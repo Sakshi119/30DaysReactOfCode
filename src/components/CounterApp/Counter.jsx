@@ -11,15 +11,21 @@ const Counter = () => {
 
   function increment() {
     if (inputValue > 0) {
-      setCounterValue(parseInt(counterValue + inputValue))
+      setCounterValue(counterValue + inputValue)
     } else {
-      setCounterValue(parseInt(counterValue + 1))
+      setCounterValue(counterValue + 1)
     }
   }
 
   function decrement() {
     if (counterValue === 0) return;
-    setCounterValue(counterValue - 1)
+    if (inputValue > 0) {
+      setCounterValue(counterValue - inputValue)
+    }
+    else{
+       setCounterValue(counterValue - 1)
+    }
+    
   }
 
 
@@ -34,10 +40,10 @@ const Counter = () => {
 
       <p> Counter : <span className={counterValue > 0 ? "valueColor" : "disabled"}>{counterValue}</span> </p>
       <div className="btnContainer">
-        <input type='number' value={inputValue} onChange={changeInputHandle} />
-        <button onClick={() => (increment())}>Increment</button>
-        <button className={counterValue === 0 ? "disabled" : ''} onClick={() => (decrement())}>Decrement</button>
-        <button onClick={() => reset()}>Reset</button>
+        <input type='number' value={inputValue} min="0" onChange={changeInputHandle} />
+        <button onClick={increment}>Increment</button>
+        <button className={counterValue === 0 ? "disabled" : ''} onClick={decrement}>Decrement</button>
+        <button onClick={reset}>Reset</button>
       </div>
 
     </div>
