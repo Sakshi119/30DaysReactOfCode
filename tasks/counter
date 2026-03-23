@@ -1,0 +1,29 @@
+Here's your **Day 1** practice problem! 🎯
+
+---
+
+## 🟢 Day 1 — Beginner | Counter App
+
+### Problem Statement
+
+Build a simple **Counter App** in React with the following features:
+
+1. Display a count (starting at `0`)
+2. Three buttons: **Increment**, **Decrement**, and **Reset**
+3. The count should **never go below 0** (disable or block decrement at 0)
+4. The count number should turn **green** if positive and **gray** if zero
+
+---
+
+### Constraints
+- Use `useState` only (no useEffect needed)
+- No external libraries for styling — inline styles or plain CSS is fine
+
+---
+
+### Bonus Challenge ⭐
+- Add a **step input** — let the user type a number and increment/decrement by that step value instead of 1
+
+---
+
+Give it a shot and paste your solution here — I'll review it, give feedback, and hand you **Day 2** once you're done! 💪

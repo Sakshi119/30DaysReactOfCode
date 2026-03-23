@@ -1,0 +1,14 @@
+import React from 'react'
+import Counter from './components/CounterApp/Counter'
+const App = () => {
+  return (
+    <div>
+      <section id="center">
+        <h1>30 Days of writing code</h1>
+      </section>
+      <Counter />
+    </div>
+  )
+}
+
+export default App
