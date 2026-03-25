@@ -35,7 +35,7 @@ const Counter = () => {
   }
 
   return (
-    <div className="counterContainer">
+    <div className="Container">
       <h2>Counter App</h2>
 
       <p> Counter : <span className={counterValue > 0 ? "valueColor" : "disabled"}>{counterValue}</span> </p>

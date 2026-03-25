@@ -1,0 +1,46 @@
+## 🟢 Day 2 — Beginner/Intermediate | Live Search Filter
+
+---
+
+### Problem Statement
+
+Build a **searchable list** in React where results filter in real-time as the user types.
+
+You're given this static data:
+
+```js
+const users = [
+  { id: 1, name: "Alice Johnson", role: "Designer" },
+  { id: 2, name: "Bob Smith", role: "Developer" },
+  { id: 3, name: "Charlie Brown", role: "Manager" },
+  { id: 4, name: "Diana Prince", role: "Developer" },
+  { id: 5, name: "Ethan Hunt", role: "Designer" },
+  { id: 6, name: "Fiona Green", role: "Tester" },
+];
+```
+
+---
+
+### Requirements
+
+1. Display all users in a list/card format by default
+2. A search input filters users **in real-time** by **name or role**
+3. Search should be **case-insensitive**
+4. If no results match, show a **"No users found"** message
+5. Highlight or show the **result count** — e.g. `Showing 3 of 6 users`
+
+---
+
+### Constraints
+- Use `useState` for the search term
+- Derive the filtered list **directly** (no separate state for filtered results)
+- No external libraries
+
+---
+
+### Bonus ⭐
+- Add a **role filter dropdown** (All / Designer / Developer / Manager / Tester) that works **together** with the search input
+
+---
+
+Good luck! Paste your solution when ready 💪

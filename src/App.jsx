@@ -1,5 +1,6 @@
 import React from 'react'
 import Counter from './components/CounterApp/Counter'
+import SearchFilter from './components/SearchFilter/SearchFilter'
 const App = () => {
   return (
     <div>
@@ -7,6 +8,7 @@ const App = () => {
         <h1>30 Days of writing code</h1>
       </section>
       <Counter />
+      <SearchFilter />
     </div>
   )
 }

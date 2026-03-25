@@ -1,0 +1,36 @@
+import React, { useState } from 'react'
+import { data } from './data'
+const SearchFilter = () => {
+    console.log(data, "data")
+    const [searchval, setSearchVal] = useState("")
+
+    function handleSearchFilter(e) {
+        setSearchVal(e.target.value)
+    }
+
+    const filteredSearchItems = data.filter(datas =>
+        datas.name.toLowerCase().includes(searchval.toLowerCase())
+    )
+    console.log(searchval)
+    return (
+        <div className="Container">
+            <h2>Search Filter App</h2>
+
+            <form className='search-input'>
+                <label for="searchInput" hidden>Search</label>
+                <input type='search' id='searchInput' value={searchval} onChange={handleSearchFilter} placeholder='Filter the users'></input>
+            </form>
+
+            <ul className='user-list'>
+                {filteredSearchItems.map((datas) => {
+                    return (
+                        <li key={datas} className='userNamesCard'>{datas.name} <span>Role:{datas.role}</span></li>
+                    )
+                })}
+            </ul>
+
+        </div>
+    )
+}
+
+export default SearchFilter
