@@ -9,7 +9,8 @@ const SearchFilter = () => {
     }
 
     const filteredSearchItems = data.filter(datas =>
-        datas.name.toLowerCase().includes(searchval.toLowerCase())
+        datas.name.toLowerCase().includes(searchval.toLowerCase()) ||
+        datas.role.toLowerCase().includes(searchval.toLowerCase())
     )
     console.log(searchval)
     return (
@@ -20,14 +21,17 @@ const SearchFilter = () => {
                 <label for="searchInput" hidden>Search</label>
                 <input type='search' id='searchInput' value={searchval} onChange={handleSearchFilter} placeholder='Filter the users'></input>
             </form>
-
+            <p>Showing {filteredSearchItems.length} of {data.length} users</p>
             <ul className='user-list'>
                 {filteredSearchItems.map((datas) => {
                     return (
                         <li key={datas} className='userNamesCard'>{datas.name} <span>Role:{datas.role}</span></li>
                     )
                 })}
+
+                {filteredSearchItems.length === 0 && <p>"No users found"</p>}
             </ul>
+
 
         </div>
     )
