@@ -17,15 +17,15 @@ const SearchFilter = () => {
         <div className="Container">
             <h2>Search Filter App</h2>
 
-            <form className='search-input'>
-                <label for="searchInput" hidden>Search</label>
+            <div className='search-input'>
+                <label htmlfor="searchInput" hidden>Search</label>
                 <input type='search' id='searchInput' value={searchval} onChange={handleSearchFilter} placeholder='Filter the users'></input>
-            </form>
+            </div>
             <p>Showing {filteredSearchItems.length} of {data.length} users</p>
             <ul className='user-list'>
                 {filteredSearchItems.map((datas) => {
                     return (
-                        <li key={datas} className='userNamesCard'>{datas.name} <span>Role:{datas.role}</span></li>
+                        <li key={datas.id} className='userNamesCard'>{datas.name} <span>Role:{datas.role}</span></li>
                     )
                 })}
 
