@@ -268,8 +268,9 @@ li.userNamesCard {
   }
 }
 
-input {
+input , select{
     padding: 16px;
     border: none;
     border-radius: 4px;
+    margin-bottom: 10px;
 }
