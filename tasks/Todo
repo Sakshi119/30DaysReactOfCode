@@ -1,0 +1,42 @@
+## 🟡 Day 3 — Intermediate | Todo List with CRUD
+
+---
+
+### Problem Statement
+
+Build a **Todo List App** where users can manage tasks.
+
+---
+
+### Requirements
+
+1. **Add** a todo item via an input + button
+2. **Display** all todos in a list
+3. **Delete** a specific todo
+4. **Toggle complete/incomplete** on a todo — strike through completed items visually
+5. Show a count of **pending todos** — e.g. `2 tasks remaining`
+6. Prevent adding **empty todos**
+
+---
+
+### Data shape each todo should follow
+```js
+{ id: Date.now(), text: "Buy groceries", completed: false }
+```
+
+---
+
+### Constraints
+- Use `useState` only
+- No external libraries
+- `id` must use `Date.now()` for uniqueness
+
+---
+
+### Bonus ⭐
+- Add **3 filter tabs** — `All` | `Active` | `Completed` — to switch between views
+- Add a **"Clear Completed"** button that removes all done todos at once
+
+---
+
+Good luck! Paste your solution when ready 💪
