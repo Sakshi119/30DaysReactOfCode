@@ -1,6 +1,7 @@
 import React from 'react'
 import Counter from './components/CounterApp/Counter'
 import SearchFilter from './components/SearchFilter/SearchFilter'
+import Todo from './components/todoApp/Todo'
 const App = () => {
   return (
     <div>
@@ -9,6 +10,7 @@ const App = () => {
       </section>
       <Counter />
       <SearchFilter />
+      <Todo />
     </div>
   )
 }

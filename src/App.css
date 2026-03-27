@@ -255,22 +255,35 @@ ul.user-list {
 }
 
 li.userNamesCard {
-  padding: 10px ;
+  padding: 10px;
   background: greenyellow;
   color: black;
   font-weight: 400;
   font-family: monospace;
   margin: 0 10px;
   border: 1px dashed;
-  span{
+
+  span {
     text-decoration: underline;
-            display: block;
+    display: block;
   }
 }
 
-input , select{
-    padding: 16px;
-    border: none;
-    border-radius: 4px;
-    margin-bottom: 10px;
+input,
+select {
+  padding: 16px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+/* 
+Todo list */
+.TodoList {
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+}
+.TodoList input {
+    margin: 0;
 }
