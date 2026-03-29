@@ -43,7 +43,8 @@
     z-index: 1;
     top: 34px;
     height: 28px;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg) scale(1.4);
+    transform: perspective(2000px) rotateZ(300deg) rotateX(44deg) rotateY(39deg)
+      scale(1.4);
   }
 
   .vite {
@@ -51,7 +52,8 @@
     top: 107px;
     height: 26px;
     width: auto;
-    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg) scale(0.8);
+    transform: perspective(2000px) rotateZ(300deg) rotateX(40deg) rotateY(39deg)
+      scale(0.8);
   }
 }
 
@@ -74,7 +76,7 @@
   border-top: 1px solid var(--border);
   text-align: left;
 
-  &>div {
+  & > div {
     flex: 1 1 0;
     padding: 32px;
 
@@ -170,7 +172,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;
@@ -203,7 +205,7 @@ input {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: 20px
+  padding: 20px;
 }
 
 section {
@@ -241,10 +243,9 @@ button {
   &:hover {
     background-color: black;
     color: greenyellow;
-    border: 1px dashed greenyellow
+    border: 1px dashed greenyellow;
   }
 }
-
 
 /* SearchFilter */
 ul.user-list {
@@ -285,5 +286,47 @@ Todo list */
   flex-direction: row;
 }
 .TodoList input {
-    margin: 0;
+  margin: 0;
+}
+.TodoDataList {
+  border: 1px dashed white;
+  width: 90%;
+}
+.TodoDataList ul {
+  padding: 10px;
+  list-style: none;
+  margin: 0;
+}
+
+.TodoDataList li {
+  text-align: left;
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.TodoDataList li:last-child {
+  margin-bottom: 0;
+}
+
+.TodoDataList span {
+  background: white;
+  padding: 10px;
+  margin-left: 10px;
+  color: black;
+  letter-spacing: 2px;
+}
+
+.TodoDataList button {
+  margin-left: auto;
+}
+.TodoDataList button:last-child {
+    margin-left: 10px;
+}
+.TodoDataList p {
+    width: 500px;
+}
+.TodoDataList li.completed p {
+    text-decoration: line-through;
 }
